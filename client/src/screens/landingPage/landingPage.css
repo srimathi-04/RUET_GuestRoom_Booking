@@ -1,0 +1,39 @@
+.App-img {
+  background-image: url('./img/ruet.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 696px;
+  opacity: 0.9.5;
+}
+
+.App-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.get-started-btn {
+  margin-top: 200px;
+  background-color: #ff7f50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.get-started-btn:hover {
+  background-color: #ff6347;
+}
+.footer {
+  margin-top: 12rem;
+  color: #09ace5;
+}
+.body-txt {
+  padding-top: 50px;
+  color: #e57709;
+  font-weight: bold;
+}
