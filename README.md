@@ -1,15 +1,13 @@
-# RUET_GuestRoom_Booking
-
-# Project Name
+# RUET Guest Room
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-Brief description of your project.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Features](#features)
+- [Advantages](#advantages)
+- [Tools and Technologies](#tools-and-technologies)
+- [Project Diagram](#project-diagram)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies](#technologies)
@@ -18,15 +16,46 @@ Brief description of your project.
 
 ## Introduction
 
-Provide a brief overview of your project. What does it do? Why did you build it? What problem does it solve?
+This RUET (Rajshahi University of Engineering & Technology) Guest Room Booking Website is an online platform developed to streamline and automate the process of booking guest rooms within the RUET campus. There are two main users on this booking website, admin and guest. This booking website will automate all the features of RUET guest rooms. The admin can access all the functionalities without any kind of restrictions. The guests can create new accounts, book rooms, cancel bookings, and make payments. On the other hand, the admin can easily check bookings, add rooms, restrict users, and refund the money. The main aim of the entire activity is to automate the RUET guest room booking process.
 
-## Features
+## advantages:
 
-List the key features and functionalities of your project. Use bullet points or checkboxes.
+1. **Ease of Booking**: Users can easily book guest rooms from anywhere, at any time.
+2. **Automated Efficiency**: The automated system significantly reduces the time required for booking and administrative tasks.
+3. **Room Availability**: Users can quickly check room availability, minimizing potential conflicts.
+4. **Secure Transactions**: Integrated payment gateways ensure safe and secure transactions.
+5. **Flexible Booking Management**: Users have the flexibility to modify or cancel bookings within specified guidelines.
+6. **User-Centric Design**: The website boasts a user-friendly interface that provides clear and comprehensive information.
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] ...
+## Tools and Technologies
+
+### Frontend
+
+- React
+- Bootstrap
+- React Bootstrap
+- Ant Design (Antd)
+- Axios
+- Moment.js
+- React Router DOM
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB (Database)
+- Mongoose (ODM)
+- Bcrypt (Password Hashing)
+- Stripe (Payment Gateway)
+- UUID (Unique Identifier)
+
+## Project Diagram
+
+![Project Diagram](./pictures/flowdiagram.png)
+
+**Fig: Project Diagram of RUET Guest Room**
+
+Here, a user can easily access the pages anytime with proper user authentication.
 
 ## Installation
 
