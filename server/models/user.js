@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema(
   {
+    fullname: {
+      type: String,
+      required: true,
+    },
     username: {
       type: String,
       required: true,
@@ -11,6 +15,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
+    },
+    dob: {
+      type: String, // Use String data type for Date of Birth
+      required: true,
     },
     address: {
       type: String,
@@ -24,7 +32,15 @@ const userSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    nid: {
+      type: Number,
+      required: true,
+    },
     isAdmin: {
+      type: Boolean,
+      default: false,
+    },
+    isVerified: {
       type: Boolean,
       default: false,
     },

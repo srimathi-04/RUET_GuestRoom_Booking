@@ -7,11 +7,14 @@ import Error from '../../components/Error';
 import Success from '../../components/Success';
 
 const Signup = () => {
+  const [fullname, setFullname] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
+  const [dob, setDob] = useState('');
   const [address, setAddress] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
+  const [nid, setNid] = useState('');
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -19,22 +22,28 @@ const Signup = () => {
 
   async function handleRegister() {
     const user = {
+      fullname,
       username,
       email,
+      dob,
       address,
       password,
       phone,
+      nid,
     };
     try {
       setLoading(true);
       const response = await axios.post('/api/users/register', user);
       setLoading(false);
       setSuccess(true);
+      setFullname('');
       setUsername('');
       setEmail('');
+      setDob('');
       setAddress('');
       setPassword('');
       setPhone('');
+      setNid('');
       window.alert('Registration Successfully Done!');
       window.location.href = '/login';
     } catch (error) {
@@ -54,7 +63,17 @@ const Signup = () => {
           {success && <Success message="Registration successfully done" />}
           <div className="lg-form">
             <div className="lg-form-login">
-              <span className="lg-title">Registration</span>
+              <span className="lg-title">Create Your Account</span>
+              <div className="lg-input-field">
+                <input
+                  type="text"
+                  placeholder="Full name"
+                  id="username"
+                  className="lInput"
+                  value={fullname}
+                  onChange={(e) => setFullname(e.target.value)}
+                />
+              </div>
               <div className="lg-input-field">
                 <input
                   type="text"
@@ -77,6 +96,16 @@ const Signup = () => {
               </div>
               <div className="lg-input-field">
                 <input
+                  type="date"
+                  placeholder="Date of Birth"
+                  id="dob"
+                  className="lInput"
+                  value={dob}
+                  onChange={(e) => setDob(e.target.value)}
+                />
+              </div>
+              <div className="lg-input-field">
+                <input
                   type="text"
                   placeholder="address"
                   id="address"
@@ -86,16 +115,14 @@ const Signup = () => {
                 />
               </div>
               <div className="lg-input-field">
-                <form action="">
-                  <input
-                    type="password"
-                    placeholder="password"
-                    id="password"
-                    className="lInput"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </form>
+                <input
+                  type="password"
+                  placeholder="password"
+                  id="password"
+                  className="lInput"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
               </div>
               <div className="lg-input-field">
                 <input
@@ -105,6 +132,17 @@ const Signup = () => {
                   className="lInput"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
+                />
+              </div>
+              <div className="lg-input-field">
+                <input
+                  type="number"
+                  placeholder="NID no"
+                  id="phone"
+                  className="lInput"
+                  pattern="[0-9] {10}"
+                  value={nid}
+                  onChange={(e) => setNid(e.target.value)}
                 />
               </div>
               <button className="lButton" onClick={handleRegister}>

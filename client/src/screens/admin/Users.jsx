@@ -40,9 +40,15 @@ const Users = () => {
                 <thead className="box-shadow">
                   <tr>
                     <th>User Id</th>
-                    <th>Name</th>
+                    <th>Full Name</th>
+                    <th>User Name</th>
                     <th>Email</th>
+                    <th>Date of Birth</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>NID no</th>
                     <th>Is Admin</th>
+                    <th>Is Verified</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -54,9 +60,15 @@ const Users = () => {
                     users.map((user) => (
                       <tr key={user._id}>
                         <td>{user._id}</td>
+                        <td>{user.fullname}</td>
                         <td>{user.username}</td>
                         <td>{user.email}</td>
+                        <td>{user.dob}</td>
+                        <td>{user.address}</td>
+                        <td>{user.phone}</td>
+                        <td>{user.nid}</td>
                         <td>{user.isAdmin ? 'Yes' : 'No'}</td>
+                        <td>{user.isVerified ? 'Yes' : 'No'}</td>
                       </tr>
                     ))
                   )}

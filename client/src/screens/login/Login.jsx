@@ -22,14 +22,22 @@ const Login = () => {
       const result = response.data;
       setLoading(false);
       localStorage.setItem('currentUser', JSON.stringify(result));
-      window.alert('Login Successfully Done.');
+
       // Check if the logged-in user is an admin
       if (result.isAdmin) {
+        window.alert('Login Successfully Done.');
         // Redirect to the admin page
         window.location.href = '/admin';
       } else {
         // Redirect to the home page for non-admin users
-        window.location.href = '/home';
+        if (!result.isVerified) {
+          window.alert('Login failed. User is not verified. Please, wait!.');
+          localStorage.removeItem('currentUser');
+          window.location = '/login';
+        } else {
+          window.alert('Login Successfully Done.');
+          window.location.href = '/home';
+        }
       }
     } catch (error) {
       console.log(error);

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const mongoURL = process.env.MONGO_URL;
 
-mongoose.connect(mongoURL, { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(mongoURL, { useUnifiedTopology: true, useNewUrlParser: true }); //safety parameter
 
 const connection = mongoose.connection;
 

@@ -23,9 +23,14 @@ const Profile = () => {
         <TabPane tab="Profile" key="1">
           <h1>My Profile</h1>
           <br />
-          <h1>Name: {user && user.username}</h1>
-          <h1>Email: {user && user.email}</h1>
-          <h1>isAdmin: {user && user.isAdmin ? 'Yes' : 'No'}</h1>
+          <h3>Name: {user && user.fullname}</h3>
+          <h3>User Name: {user && user.username}</h3>
+          <h3>Date of Birth: {user && user.dob}</h3>
+          <h3>Address: {user && user.address}</h3>
+          <h3>Email: {user && user.email}</h3>
+          <h3>NID No: {user && user.nid}</h3>
+          <h3>Mobile: {user && user.phone}</h3>
+          <h3>isAdmin: {user && user.isAdmin ? 'Yes' : 'No'}</h3>
         </TabPane>
         <TabPane tab="Bookings" key="2">
           <MyBookings />

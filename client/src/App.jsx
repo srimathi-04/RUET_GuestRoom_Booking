@@ -11,6 +11,7 @@ import Profile from './screens/profile/Profile';
 import Admin from './screens/admin/Admin';
 import LandingPage from './screens/landingPage/LandingPage';
 import './bootstrap.css';
+import ContactUs from './screens/contactUs/ContactUs';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
           <Route path="/home" element={<Homescreen />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Signup />} />
+          <Route path="/contactUs" element={<ContactUs />} />
           <Route
             path="/book/:roomid/:fromdate/:todate"
             element={<BookingScreen />}
