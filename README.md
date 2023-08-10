@@ -1,19 +1,72 @@
 # RUET Guest Room
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+Welcome to the RUET Guest Room Application, a comprehensive platform for simplifying the process of booking guest rooms at RUET (Rajshahi University of Engineering & Technology).
 
 ## Table of Contents
 
+- [Installation](#installation)
 - [Introduction](#introduction)
 - [Advantages](#advantages)
 - [Tools and Technologies](#tools-and-technologies)
 - [Project Diagram](#project-diagram)
 - [Project Description](#project-description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
+- [Database](#database)
+- [Conclusion](#conclusion)
+
+## Installation
+
+Provide step-by-step instructions on how to install and set up your project locally. Include any prerequisites, dependencies, or environment variables that need to be configured.
+
+```bash
+# Clone the repository
+git clone https://github.com/Sumon-Ali-1999/RUET_GuestRoom_Booking.git
+
+# Navigate to the project directory
+cd RUET_GuestRoom_Booking
+
+# Install server dependencies
+npm install
+
+# Navigate to the client directory
+cd client
+
+# Install client dependencies
+npm install
+
+#Start the development server
+npm run dev
+
+Access the application by opening your browser and navigating to http://127.0.0.1:5173/
+
+```
+
+## Dependencies
+
+To run this project make sure you have these dependencies:
+
+### Frontend
+
+- "@emailjs/browser": "^3.11.0"
+- "antd": "^5.5.0"
+- "axios": "^1.4.0"
+- "moment": "^2.29.4"
+- "react": "^18.2.0"
+- "react-bootstrap": "^2.7.4"
+- "react-dom": "^18.2.0"
+- "react-router-dom": "^6.11.1"
+- "react-spinners": "^0.13.8"
+- "react-stripe-checkout": "^2.6.3"
+
+### Backend
+
+- "bcrypt": "^5.1.0"
+- "dotenv": "^16.1.4"
+- "express": "^4.18.2"
+- "mongoose": "^7.1.1"
+- "nodemon": "^2.0.22"
+- "router": "^1.3.8"
+- "stripe": "^12.5.0"
+- "uuid": "^9.0.0"
 
 ## Introduction
 
@@ -78,6 +131,7 @@ To create a new account a user need to fill in all the details of that form. Aft
 **Fig: Signup Screen**
 
 ![Output](./pictures/signup1.png)
+
 **Fig: A successful massage show, if registration successfully is done.**
 
 ### Login Screen
@@ -90,6 +144,7 @@ After Clicking the “Register” button, a Login box will appear. There are two
 **Fig: Login Screen**
 
 ![Output](./pictures/login.png)
+
 **Fig: A pop-up box will appear if the user username or password is wrong**
 
 ### Home Screen
@@ -124,11 +179,13 @@ After clicking the pay now button, it will appear a term and condition page and 
 ### Output
 
 ![Output](./pictures/pay.png)
+
 **Fig: Payment Box**
 
 After filling up all the details and clicking the pay button the exact amount will pay for that room and a window alert will appear.
 
 ![Output](./pictures/pay2.png)
+
 **Fig: Window alert of successful room booking**
 
 After clicking “Ok” it will redirect to the Home Screen.
@@ -217,35 +274,13 @@ Ensure that you have MongoDB installed and running locally or specify a connecti
 
 For local development, you can use the following connection URL in your `server.js` file:
 
-````javascript
+```javascript
 mongoose.connect('mongodb://127.0.0.1:5173/ruet-guest-room', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+```
 
 ## Conclusion
 
 In this project I have tried my best to make user friendly website. This website can be handled by any person who has little bit of idea of computers. In this website I have tried to meet most of the requirements of the present RUET Guest Room booking system including maintaining details of customers, and rooms. I also keep provision to update the details of customers, rooms. In my effort I have tried to make my website all the more user friendly but there may some features which I would like to include in my continuous attempts.
-
-
-
-## Installation
-
-Provide step-by-step instructions on how to install and set up your project locally. Include any prerequisites, dependencies, or environment variables that need to be configured.
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/your-project.git
-
-# Navigate to the project directory
-cd your-project
-
-# Install server dependencies
-npm install
-
-# Navigate to the client directory
-cd client
-
-# Install client dependencies
-npm install
-````
